@@ -118,7 +118,7 @@ pub fn get_system_information() -> SystemInfo {
     let distro_id =
         parse_osr_key(&os_release, "ID").expect("[ERROR] Failed reading os-release ID!");
     let distro_build_id =
-        parse_osr_key(&os_release, "BUILD_ID").expect("[ERROR] Failed reading os-releae BUILD_ID!");
+        parse_osr_key(&os_release, "VERSION_ID").expect("[ERROR] Failed reading os-release BUILD_ID!");
 
     let username = get_by_type(Type::Username).expect("[ERROR] Failed fetching username!");
     let hostname = get_by_type(Type::HostName).expect("[ERROR] Failed fetching hostname!");
